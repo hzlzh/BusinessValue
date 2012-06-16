@@ -14,10 +14,8 @@
   <meta name="keywords" content="2012,中国IT价值峰会,移动版,summit.itvalue.com.cn">
   <meta name="description" content="2012,中国IT价值峰会,summit.itvalue.com.cn,主办机构：IT价值联盟">
   <meta name="robots" content="index, follow">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png"/>
-  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" />
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/mobile-style.css">
   <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
@@ -35,7 +33,6 @@
   </script>
 </head>
 <body>
-  <a href="#submit-box"><span class="icons jump-to"></span></a>
   <img style="display:none;" src="css/images/sprites.png" alt="load">
   <header class="header">
     <img src="images/m-banner.png" alt="中国IT价值峰会"></header>
@@ -47,6 +44,7 @@
           <p>时间：2012年8月16-18日</p>
           <p>地点：三亚万丽度假酒店</p>
           <p>规模：200人</p>
+          <p>主办机构：ITValue，《商业价值》杂志</p>
         </li>
       </ul>
     </article>
@@ -75,38 +73,74 @@
     </article>
     <h2>现在报名</h2>
     <article id="submit-box">
-      <ul>
-        <li>大会报名仅面向企业CEO、COO、CIO及IT主管、总监；不包含IT软硬件厂商从业人士。</li>
-        <li>ITValue社区CIO会员： 免费参会，自付机票及酒店住宿费用，其他项目（会议期间用餐、资料、服装、休闲活动等）均为免费；</li>
-        <li>非ITValue社区的CIO：参会费8000元 （包含3晚五星级酒店住宿、会议期间用餐、资料、服装、休闲活动等），机票自理。</li>
-      </ul>
-      <form class="form-inline">
-        <div class="submit-box">
+      <div class="baoMing">
+        <br>
+        <div class="clumnTop1">
+          <p>大会报名仅面向企业CEO、COO、CIO及IT主管、总监；不包含IT软硬件厂商从业人士。</p>
+          <p>参会费8000元 （包含3晚五星级酒店住宿、会议期间用餐、资料、服装、休闲活动等），机票自理。</p>
+          <p>参会及合作咨询：010-85711951  周伟</p>
+        </div>
+
+        <div class="baoMingBox3 baoMingBox3">
+        <form class="form-inline" id="register_meet_form2012">
+        <div class="submit-box baoMingBox3Content">
           <div class="item">
             姓名 <i>*</i>
-            <input id="name" type="text" class="input-small" value="<?php echo $name; ?>"></div>
+            <input id="name" name="name" type="text" class="input-small" value="<?php echo $name; ?>"></div>
           <div class="item">
             手机 <i>*</i>
-            <input id="mobile" type="text" class="input-small" value="<?php echo $mobile; ?>"></div>
+            <input id="mobile" name="mobile" type="text" class="input-small" value="<?php echo $mobile; ?>"></div>
           <div class="item">
             邮箱
             <i>*</i>
-            <input id="email" type="text" class="input-small" value="<?php echo $email; ?>"></div>
+            <input id="email" name="email" type="text" class="input-small" value="<?php echo $email; ?>"></div>
           <div class="item">
             公司
             <i>*</i>
-            <input id="company" type="text" class="input-small" value="<?php echo $company; ?>"></div>
+            <input id="company" name="company" type="text" class="input-small" value="<?php echo $company; ?>"></div>
+          <div class="item">
+            部门
+            <i>*</i>
+            <input id="department" name="department" type="text" class="input-small" value="<?php echo $department; ?>"></div>
           <div class="item">
             职位
             <i>*</i>
-            <input id="title" type="text" class="input-small" value="<?php echo $position; ?>"></div>
+            <input id="title" name="title" type="text" class="input-small" value="<?php echo $position; ?>"></div>
+          <div class="item">
+                国家<i>&nbsp;&nbsp;</i>
+                <select id="" name="country">
+                  <option value="please">请选择</option>
+                </select>
+                <br />
+                省市<i>&nbsp;&nbsp;</i>
+                <select disabled="true" id="" name="province">
+                  <option value="">请选择</option>
+                </select>
+                <br />
+                地区<i>&nbsp;&nbsp;</i>
+                <select disabled="true" id="" name="city">
+                  <option value="">请选择</option>
+                </select>
+            </div>
+          <div class="item">
+            行业<i>&nbsp;&nbsp;</i>
+            <select id="sector" name="sector">
+                  <option value="">请选择</option>
+                </select></div>
+          <div class="item">
+            职责<i>&nbsp;&nbsp;</i>
+            <select id="" name="duty">
+                  <option value="">请选择</option>
+                </select></div>
           <div class="alert"></div>
-          <div class="item submit b-bottom">
+          <div class="item submit b-bottom baoMingBox4">
             <img src="css/images/loading.gif" alt="loading">
-            <button id="submit_button" type="button" class="button submit">提交</button>
+            <input id="submit_button" type="submit" class="button submit" value="提交"/>
           </div>
         </div>
       </form>
+        </div>
+      </div>
     </article>
   </div>
   <footer class="footer">

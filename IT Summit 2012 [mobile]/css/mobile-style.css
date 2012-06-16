@@ -1,8 +1,8 @@
 body{font-size:14px;margin:0 auto;}
 img{width:100%;}
 .jump-to{background-position:2px -1000px;height:95px;position:fixed;right:0;top:110px;width:59px;z-index:999;}
-.content ul{list-style:none outside none;margin:5px 0 0;}
-.content ul li{padding:0;}
+.content ul{list-style:none outside none;margin:5px 2% 0;}
+.content ul li{padding:0;line-height:20px;margin-bottom: 10px;}
 .content h2{border-bottom:1px solid #818181;background-image:linear-gradient(bottom,#81bc53 18%,#72a647 64%);background-image:-o-linear-gradient(bottom,#81bc53 18%,#72a647 64%);background-image:-moz-linear-gradient(bottom,#81bc53 18%,#72a647 64%);background-image:-webkit-linear-gradient(bottom,#81bc53 18%,#72a647 64%);background-image:-ms-linear-gradient(bottom,#81bc53 18%,#72a647 64%);background-image:-webkit-gradient(
 linear,
 left bottom,
@@ -51,6 +51,11 @@ color-stop(0.58,rgb(151,200,126))
 .form-inline{margin:10px 8%;}
 .form-inline .item{margin:15px 0;font-size:16px;}
 .form-inline .item input{height:23px;margin-left:10%;width:60%;}
+.form-inline .item select{    height: 30px;
+    line-height: 30px;
+    margin-bottom: 7px;
+    margin-left: 10%;
+    width: 60%;}
 .form-inline .item i{color:#BEBEBE;margin-left:5px;vertical-align:middle;}
 .form-inline .submit-box .alert{display:none;margin-top:20px;text-align:left;}
 .form-inline .submit img{display:none;position:absolute;right:0;top:10px;}
@@ -73,3 +78,10 @@ color-stop(0.58,rgb(151,200,126))
 .meeting-agenda .agenda-box .name{font-size:13px;color:#3399ff;margin-left:10px;}
 .meeting-agenda .agenda-box .event-tip{border:2px solid #DDDDDD;border-radius:5px 5px 5px 5px;display:inline-block;font-size:13px;line-height:18px;margin-bottom:30px;padding:5px;text-align:center;}
 .meeting-agenda .agenda-box .event-tip strong{color:#EF3261;padding:0 5px;}
+
+#submit_button{    height: 32px;
+    line-height: 26px;
+    width: 100px;}
+.item-list{margin-left: 10%;}
+.item-list select{margin-left: 0!important;}
+.clumnTop1{padding:0 2%;}
