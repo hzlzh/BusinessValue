@@ -107,7 +107,6 @@
             <i>*</i>
             <input id="title" name="title" type="text" class="input-small" value="<?php echo $position; ?>"></div>
           <div class="item">
-                国家<i>&nbsp;&nbsp;</i>
                 <select id="" name="country">
                   <option value="please">请选择</option>
                 </select>

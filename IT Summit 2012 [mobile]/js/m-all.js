@@ -76,10 +76,6 @@ function validateForm() {
     alert("您的邮箱格式填写有误！");
     return false;
   }
-  if ($country.find("option:selected").html() !== "请选择" && $province.find("option:selected").html() === "请选择") {
-    alert("请选择地区完整！");
-    return false;
-  }
   if ($country.find("option:selected").html() !== "请选择" && $province.find("option:selected").html() !== "请选择") {
     var c_id = $country.find("option:selected").attr("value");
     var p_id = $province.find("option:selected").attr("value");
@@ -98,13 +94,11 @@ function validateForm() {
   parms += api_info;
   $.getJSON(FormApi + "?jsoncallback=?", parms, function(data) {
     if (!data['error']) {
-      $('.alert').removeClass('alert-error').addClass('alert-success').html('<div class="success-title"><i class="icons success-icon"></i><span>提交成功</span></div>'+data['info']).slideUp().slideDown();
+      $('.alert').removeClass('alert-error').addClass('alert-success').html('<div class="success-title"><i class="icons success-icon"></i><span>提交成功</span></div>' + data['info']).slideUp().slideDown();
       $('#name,#mobile,#email,#company,#title,#department').val('');
     } else {
-      if(data['error_code'] == 10103)
-        $('.alert').removeClass('alert-success').addClass('alert-error').html('您已使用该邮箱进行过报名').slideUp().slideDown();
-      else
-        $('.alert').removeClass('alert-success').addClass('alert-error').html('提交失败').slideUp().slideDown();
+      if (data['error_code'] == 10103) $('.alert').removeClass('alert-success').addClass('alert-error').html('您已使用该邮箱进行过报名').slideUp().slideDown();
+      else $('.alert').removeClass('alert-success').addClass('alert-error').html('提交失败').slideUp().slideDown();
     }
   })
 }
@@ -114,27 +108,6 @@ function activeSelect() {
     $country = $form.find("select[name='country']"),
     $province = $form.find("select[name='province']"),
     $city = $form.find("select[name='city']");
-  $country.change(function() {
-    var v = $.trim($(this).val());
-    if (v == "please") {
-      var option = "<option>请选择</option>";
-      $province.empty().append(option).attr("disabled", true);
-      $city.empty().append(option).attr("disabled", true);
-      return false;
-    }
-    $province.attr("disabled", false);
-    getList($province, {
-      api_sig: "f5ac92322a92a517f45f31702045c74f",
-      method: "user.province",
-      "region_id": v
-    }, function(sign) {
-      if (sign) {
-        var option = "<option>请选择</option>";
-        $province.empty().append(option).attr("disabled", true);
-        $city.empty().append(option).attr("disabled", true);
-      }
-    });
-  });
   $province.change(function() {
     var v = $.trim($(this).val());
     if ($province.find("option").eq(0).html() == "请选择") {
@@ -165,16 +138,24 @@ function activeSelect() {
         if (opts.length == 0) {
           sign = true;
         }
+        $sel.append(opts);
         if (callback) {
           callback(sign);
         }
-        $sel.append(opts);
       });
     }
   getList($country, {
     method: "user.country",
     "region_id": 0
+  }, function() {
+    $country.val(1000).hide();
   });
+  getList($province, {
+    api_sig: "f5ac92322a92a517f45f31702045c74f",
+    method: "user.province",
+    "region_id": 1000
+  });
+  $province.attr("disabled", false);
 };
 
 function activeSector(sel, options) {
