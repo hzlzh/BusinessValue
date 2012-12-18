@@ -3,28 +3,19 @@
   %head
     %meta{'charset' => 'UTF-8'}/
     %meta{:name => "viewport", :content  => "width=device-width"}
-    %title cool-head
+    %title 商业价值移动客户端
     %meta{:name => "keywords", :content  => ""}
     %meta{:name => "description", :content  => ""}
-    %meta{:name => "robots", :content  => "noindex,nofollow"}
-    %meta{:name => "apple-mobile-web-app-capable", :content  => "no"}
-    %meta{:name => "Rating", :content  => "Safe For Kids"}
-    %meta{:name => "revisit-after", :content  => "1 days"}
-    %meta{:name => "author", :content  => ""}
-    %meta{:name => "generator", :content  => ""}
+    %meta{:name => "viewport", :content  => "width=device-width, initial-scale=1"}
     %link{:rel => "apple-touch-icon", :size => "57x57", :href  => "/apple-touch-icon-57x57.png"}
     %link{:rel => "apple-touch-icon", :size => "72x72", :href  => "/apple-touch-icon-72x72.png"}
     %link{:rel => "apple-touch-icon", :size => "114x114", :href  => "/apple-touch-icon-114x114.png"}
     %link{:rel => "stylesheet", :href  => "css/style.css"}
-    %link{:rel => "alternate", :typr => "application/rss+xml", :title => "RSS Feed", :href  => "#"}
     %script{:src  => "js/libs/modernizr.js"}
     %script{:src  => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
     :javascript
       !window.jQuery && document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
     :javascript
-      // here the pre-load JS starts.
-      
-      // Google analytics code
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-00000000-0']);
       _gaq.push(['_trackPageview']);
@@ -35,11 +26,56 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
   %body
-    %header
-      header
-    %article 
-      %p body
+    %header.header
+      .logo
+        %img{:src => "images/logo.png", :alt => ""} 
+      .slogen
+        %img{:src => "images/slogen.png", :alt => ""}
+    .banner
+      .color-bar
+      %img{:src => "images/banner-bg.jpg", :alt => ""}
+      .banner-content
+        .ios-shot
+          %img{:src => "images/ipad.png", :alt => ""} 
+        .content-text
+          《商业价值》移动客户端不仅仅是纸媒的电子化，它是一本真正意义上的电子杂志，一本适合移动阅读的杂志，而且它是免费的。
+        .download-link
+          .ios-dl
+            %img{:src => "images/app-store.png", :alt => ""} 
+            %img{:src => "images/apk-dl.png", :alt => ""} 
+          .text-dl
+            其他下载方式
+          .android-dl
+            %img{:src => "images/google-play.png", :alt => ""} 
+            %img{:src => "images/wandoujia.png", :alt => ""} 
+    %article.more-des
+      %ul.feature
+        %li
+          %img{:src => "images/client.png", :alt => ""} 
+          %h3 全平台支持
+          .info 完美支持 iPhone、iPad 和 Android 设备，优化了移动阅读与分享的体验，让有启发的文章和精彩的观点可以瞬间分享给你的朋友和关注者。
+        %li
+          %img{:src => "images/gift.png", :alt => ""} 
+          %h3 积分换好礼
+          .info 在这里, 您不仅仅能免费查看《商业价值》杂志的所有内容，还能参与客户端里互动和编辑推荐的各种的活动, 通过参与互动, 您将有机会获取实物奖品。
+      %h2 来自用户的声音
+      %ul 
+        %li
+          .author 教主:
+          .reply 很难有所作为。。手机里面有个微信，够了，你凭什么让我再装一个类似的应用？说服我。。
+        %li 
+          .author lee:
+          .reply 微信已经占领了庞大的用户，当你身边的熟人没有一个使用LINE的时候，你是否还能转过去呢？就像当年Whatsapp在国内的没落一样。  
+        %li
+          .author fish:
+          .reply Line 的表情库和表情收费模式可复制性太强（虽然以微信的野心几乎看不上这个），而且在聊天过程中加入表情也并不需要什么社区氛围，在中国市场，Line几乎没有什么优势.
+      .qrcode
+        %img{:src => "images/qrcode.png", :alt => ""}
+        %span 二维码扫描下载
     %footer
-      footer
+      .copyright Copyright © 2009 - 2012 《商业价值》杂志
+      .follow-us
+        %img{:src => "images/weibo.png", :alt => ""} 
+        %img{:src => "images/tencentweibo.png", :alt => ""} 
     :javascript
       // here the post-load JS starts.
