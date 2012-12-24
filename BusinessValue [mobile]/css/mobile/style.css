@@ -1,0 +1,794 @@
+/*
+@name: BusinessValue Mobile
+@author: Andy Huang(andyhuang@geekpark.net)
+*/
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+  
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+       * Don't show links for images, or javascript/internal links
+       */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+body {
+  min-width: 320px;
+  margin: 0;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.header {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1024px;
+}
+.header .logo {
+  float: left;
+  margin: 20px 25px 10px 20px;
+}
+.header .slogen {
+  margin-top: 50px;
+}
+.banner {
+  height: 386px;
+}
+.banner .color-bar {
+  background: url("images/color-bar.png") repeat scroll center center transparent;
+  height: 8px;
+  width: 100%;
+  display: block;
+}
+.banner img.banner-bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+.banner div.banner-bg {
+  background: url("images/banner-bg.jpg") repeat scroll center center transparent;
+  display: block;
+  height: 386px;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+.banner .banner-content {
+  margin: 0 auto;
+  width: 1024px;
+}
+.banner .banner-content .ios-shot {
+  margin: 40px 0 0 60px;
+  float: left;
+  width: 35%;
+}
+.banner .banner-content .ios-shot img {
+  max-width: 100%;
+  position: absolute;
+  width: auto;
+  z-index: 20;
+}
+.banner .banner-content .content-text {
+  margin-top: 90px;
+  float: right;
+  position: absolute;
+  right: 1px;
+  color: #fff;
+  font-size: 1.4em;
+  line-height: 2em;
+  width: 480px;
+  left: 50%;
+  text-shadow: 1px 1px 3px #000;
+}
+.banner .banner-content .download-link {
+  float: right;
+  margin-top: 277px;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+.banner .banner-content .download-link .ios-dl {
+  margin-bottom: 46px;
+}
+.banner .banner-content .download-link .ios-dl img {
+  margin-right: 32px;
+}
+.banner .banner-content .download-link .text-dl {
+  height: 44px;
+  font-size: 0.8em;
+  line-height: 44px;
+}
+.banner .banner-content .download-link .android-dl img {
+  margin-right: 32px;
+}
+.mobile-box {
+  display: none;
+}
+.more-des-box {
+  background-color: #fff;
+  color: #6a350a;
+}
+.more-des-box .more-des {
+  width: 1024px;
+  margin: 0 auto;
+  padding-top: 175px;
+}
+.more-des-box .more-des ul.feature {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.more-des-box .more-des ul.feature li {
+  width: 45%;
+  list-style-type: none;
+  float: left;
+  margin: 0;
+}
+.more-des-box .more-des ul.feature li.first {
+  margin-right: 5%;
+}
+.more-des-box .more-des ul.feature li img {
+  margin: 0 auto;
+  display: block;
+}
+.more-des-box .more-des ul.feature li h3 {
+  text-align: center;
+  font-size: 1.3em;
+}
+.more-des-box .more-des ul.feature li .info {
+  font-size: 1.1em;
+  line-height: 2em;
+  padding: 0 0 0 8%;
+}
+.more-des-box .more-des h2 {
+  font-size: 1.2em;
+  margin-left: 6%;
+  margin-top: 80px;
+}
+.more-des-box .more-des .review-list {
+  position: relative;
+  margin: 0 27px;
+  color: #555;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #f0f0f0;
+  padding: 8px 20px;
+}
+.more-des-box .more-des .review-list .emborder {
+  border-color: transparent transparent #F0F0F0;
+  border-style: solid;
+  border-width: 15px;
+  display: block;
+  left: 8%;
+  position: absolute;
+  top: -30px;
+}
+.more-des-box .more-des .review-list li {
+  border-bottom: 1px dashed #CBCBCB;
+  font-size: 0.8em;
+  line-height: 2em;
+  padding: 17px 0;
+  text-shadow: 1px 1px 0 #FFFFFF;
+}
+.more-des-box .more-des .review-list li.last {
+  border: none;
+}
+.more-des-box .more-des .review-list li .author {
+  padding-left: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+}
+.more-des-box .more-des .review-list li .review {
+  padding-left: 15px;
+  font-size: 1em;
+  line-height: 2em;
+  text-shadow: 1px 1px 0 #FFFFFF;
+}
+.more-des-box .more-des .qrcode img {
+  margin: 53px auto 5px;
+  display: block;
+}
+.more-des-box .more-des .qrcode span {
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 10px;
+  color: #5a5a5a;
+}
+.footer {
+  margin: 25px 0;
+  text-align: center;
+}
+.footer .copyright {
+  border-top: 1px solid #ccc;
+  color: #b5b5b5;
+  padding-top: 22px;
+  margin: 35px 0 20px;
+}
+.footer .follow-us img.weibo {
+  margin-right: 25px;
+}
+body.iphone {
+  overflow: hidded;
+}
+body.iphone .header .slogen {
+  margin-top: 5%;
+}
+body.iphone .header .logo {
+  margin: 5px;
+}
+body.iphone .banner .color-bar {
+  height: 4px;
+}
+body.iphone .banner .banner-bg,
+body.iphone .banner .banner-content,
+body.iphone .more-des-box,
+body.iphone .footer {
+  display: none;
+}
+body.iphone .mobile-box {
+  display: block;
+}
+body.iphone .mobile-box .banner-320 {
+  display: block;
+  height: 332px;
+  width: 320px;
+  background: url("images/banner-320.png") no-repeat scroll center center transparent;
+  margin: 0 auto;
+}
+body.iphone .mobile-box .app-des {
+  margin-top: -30px;
+  font-size: 0.8em;
+  text-align: center;
+  color: #6A350A;
+}
+body.iphone .mobile-box .app-store {
+  text-indent: -999px;
+  display: block;
+  height: 55px;
+  width: 193px;
+  margin: 5px auto;
+  background: url("images/app-store.png") no-repeat scroll center center transparent;
+}
+body.iphone .mobile-box .apk-dl {
+  text-indent: -999px;
+  display: none;
+}
+body.iphone .mobile-box .google-play {
+  text-indent: -999px;
+  display: none;
+}
+body.android {
+  overflow: hidded;
+}
+body.android .banner .color-bar {
+  height: 4px;
+}
+body.android .banner .banner-bg,
+body.android .banner .banner-content,
+body.android .more-des-box,
+body.android .footer {
+  display: none;
+}
+body.android .mobile-box {
+  display: block;
+}
+body.android .mobile-box .banner-320 {
+  display: block;
+  height: 332px;
+  width: 320px;
+  background: url("images/banner-320.png") no-repeat scroll center center transparent;
+}
+body.android .mobile-box .app-des {
+  margin-top: -30px;
+  font-size: 0.8em;
+  text-align: center;
+  color: #6A350A;
+}
+body.android .mobile-box .app-store {
+  text-indent: -999px;
+  display: none;
+}
+body.android .mobile-box .apk-dl {
+  text-indent: -999px;
+  display: block;
+  height: 55px;
+  width: 193px;
+  margin: 5px auto;
+  background: url("images/apk-dl.png") no-repeat scroll center center transparent;
+}
+body.android .mobile-box .google-play {
+  text-indent: -999px;
+  display: block;
+  height: 55px;
+  width: 193px;
+  margin: 5px auto;
+  background: url("images/google-play.png") no-repeat scroll center center transparent;
+}
+@media screen and (max-width: 1040px) {
+  .banner img.banner-bg {
+    height: 386px;
+    display: none;
+  }
+  .more-des {
+    width: auto!important;
+  }
+  .header {
+    width: auto!important;
+  }
+  .banner-content {
+    width: auto!important;
+  }
+  .banner .banner-content .download-link .ios-dl img {
+    width: 40%;
+  }
+  .banner .banner-content .download-link .android-dl img {
+    width: 40%;
+  }
+  .banner .banner-content .content-text {
+    width: 40%;
+  }
+  .banner .banner-content .ios-shot {
+    margin: 3%;
+  }
+  .header .slogen {
+    margin-top: 5%;
+    max-width: 63%;
+  }
+  .header .logo {
+    max-width: 14%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner img.banner-bg {
+    height: 386px;
+    width: auto!important;
+  }
+  .more-des {
+    width: auto!important;
+  }
+  .header {
+    width: auto!important;
+  }
+  .banner-content {
+    width: auto!important;
+  }
+  .banner .banner-content .ios-shot {
+    margin: 3% 5%;
+  }
+  .banner .banner-content .ios-shot img {
+    max-width: 36%;
+  }
+  .banner .banner-content .content-text {
+    font-size: 1.1em;
+    width: 50%;
+    margin-top: 10%;
+  }
+  .banner {
+    height: 292px;
+  }
+  .header .slogen {
+    margin-top: 5%;
+    width: 43%;
+  }
+  .header .logo {
+    max-width: 9%;
+    margin: 15px 15px 10px;
+  }
+  .banner .banner-content .download-link {
+    margin-top: 200px;
+  }
+  .banner .banner-content .download-link .ios-dl {
+    margin-left: 0;
+  }
+  .banner .banner-content .download-link .ios-dl img {
+    width: 40%;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  .banner .banner-content .download-link .android-dl img {
+    width: 40%;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .banner .banner-content .download-link .ios-dl img.appstore {
+    margin-right: 20px;
+  }
+  .banner .banner-content .download-link .android-dl img.gplay {
+    margin-right: 20px;
+  }
+  .banner .banner-content .download-link .ios-dl {
+    margin-bottom: 15px;
+  }
+  .more-des-box .more-des h2 {
+    font-size: 1em;
+    margin-top: 60px;
+  }
+  .more-des-box .more-des .review-list {
+    margin: 0 3%;
+    padding: 0 5px;
+  }
+  .more-des-box .more-des .review-list li {
+    padding: 15px 0;
+  }
+  .more-des-box .more-des .review-list li .author {
+    margin-bottom: 0;
+  }
+  .more-des-box .more-des .review-list li .review {
+    line-height: 1.5em;
+  }
+  .more-des-box .more-des .qrcode img {
+    margin: 30px auto 5px;
+  }
+  .banner .banner-content .download-link .text-dl {
+    font-size: 0.7em;
+  }
+  .footer .copyright {
+    font-size: 0.8em;
+    margin: 20px 0 10px;
+  }
+  .more-des-box .more-des ul.feature li h3 {
+    font-size: 1em;
+  }
+  .more-des-box .more-des ul.feature li .info {
+    font-size: 0.8em;
+  }
+  .more-des-box .more-des {
+    padding-top: 91px;
+  }
+  .more-des-box .more-des ul.feature li img {
+    max-width: 160px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .banner img.banner-bg {
+    height: 386px;
+    width: auto!important;
+  }
+  .more-des {
+    width: auto!important;
+  }
+  .header {
+    width: auto!important;
+  }
+  .banner-content {
+    width: auto!important;
+  }
+  .banner .banner-content .download-link .ios-dl img {
+    width: 40%;
+    margin-top: 10px;
+  }
+  .banner .banner-content .download-link .text-dl {
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-left: -1em;
+  }
+  .more-des-box .more-des {
+    padding-top: 188px;
+  }
+  .more-des-box .more-des h2 {
+    margin-top: 40px;
+  }
+  .banner .banner-content .download-link {
+    margin-top: 252px;
+    width: 90%;
+  }
+  .banner .banner-content .ios-shot {
+    margin: 3%;
+  }
+  .more-des-box .more-des ul.feature li {
+    width: 90%;
+  }
+  .banner .banner-content .ios-shot img {
+    max-width: 39%;
+    margin: 2% 0 ;
+    min-width: 137px;
+  }
+  .banner .banner-content .content-text {
+    font-size: 0.9em;
+    margin-left: 3%;
+    margin-top: 10%;
+    width: 45%;
+  }
+  .banner {
+    height: auto;
+    min-height: 230px;
+  }
+  .header .slogen {
+    margin-top: 10%;
+    width: 63%;
+  }
+  .header .logo {
+    min-width: 14%;
+    width: 14%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .banner {
+    min-height: 170px;
+  }
+  .banner .banner-content .content-text {
+    font-size: 0.7em;
+    margin-left: 3%;
+    margin-top: 10%;
+    width: 45%;
+  }
+  .banner .banner-content .download-link {
+    margin-top: 202px;
+  }
+  .footer .follow-us img {
+    width: 20%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  body.iphone .mobile-box .app-store {
+    background-image: url("images/app-store@2x.png");
+    background-size: 193px 55px;
+  }
+  body.iphone .mobile-box .banner-320,
+  body.android .mobile-box .banner-320 {
+    background-image: url("images/banner-320@2x.png");
+    background-size: 320px 332px;
+  }
+  body.android .mobile-box .apk-dl {
+    background-image: url("images/apk-dl@2x.png");
+    background-size: 193px 55px;
+  }
+  body.android .mobile-box .google-play {
+    background-image: url("images/google-play@2x.png");
+    background-size: 193px 55px;
+  }
+}

@@ -12,7 +12,7 @@
     %link{:rel => "apple-touch-icon", :size => "114x114", :href  => "/apple-touch-icon-114x114.png"}
     %link{:rel => "stylesheet", :href  => "css/style.css"}
     %script{:src  => "js/libs/modernizr.js"}
-    %script{:src  => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    %script{:src  => "js/jquery-1.7.2.min.js"}
     :javascript
       !window.jQuery && document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
     :javascript
@@ -25,57 +25,60 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-    analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-  %body
+  %body.iphone
     %header.header
-      .logo
-        %img{:src => "images/logo.png", :alt => ""} 
-      .slogen
-        %img{:src => "images/slogen.png", :alt => ""}
+      %img.logo{:src => "images/logo.png", :alt => ""} 
+      %img.slogen{:src => "images/slogen.png", :alt => ""}
     .banner
       .color-bar
-      %img{:src => "images/banner-bg.jpg", :alt => ""}
+      %img.banner-bg{:src => "images/banner-bg.jpg", :alt => ""}
+      .mobile-box
+        .banner-320
+        .app-des 专为移动而生的技术商业杂志，内容完全免费！
+        .app-store
+      .banner-bg
       .banner-content
         .ios-shot
           %img{:src => "images/ipad.png", :alt => ""} 
-        .content-text
-          《商业价值》移动客户端不仅仅是纸媒的电子化，它是一本真正意义上的电子杂志，一本适合移动阅读的杂志，而且它是免费的。
+        .content-text 《商业价值》移动客户端不仅仅是纸媒的电子化，它是一本真正意义上的电子杂志，一本适合移动阅读的杂志，而且它是免费的。
         .download-link
           .ios-dl
-            %img{:src => "images/app-store.png", :alt => ""} 
+            %img.appstore{:src => "images/app-store.png", :alt => ""} 
             %img{:src => "images/apk-dl.png", :alt => ""} 
-          .text-dl
-            其他下载方式
+          .text-dl 其他下载方式
           .android-dl
-            %img{:src => "images/google-play.png", :alt => ""} 
+            %img.gplay{:src => "images/google-play.png", :alt => ""} 
             %img{:src => "images/wandoujia.png", :alt => ""} 
-    %article.more-des
-      %ul.feature
-        %li
-          %img{:src => "images/client.png", :alt => ""} 
-          %h3 全平台支持
-          .info 完美支持 iPhone、iPad 和 Android 设备，优化了移动阅读与分享的体验，让有启发的文章和精彩的观点可以瞬间分享给你的朋友和关注者。
-        %li
-          %img{:src => "images/gift.png", :alt => ""} 
-          %h3 积分换好礼
-          .info 在这里, 您不仅仅能免费查看《商业价值》杂志的所有内容，还能参与客户端里互动和编辑推荐的各种的活动, 通过参与互动, 您将有机会获取实物奖品。
-      %h2 来自用户的声音
-      %ul 
-        %li
-          .author 教主:
-          .reply 很难有所作为。。手机里面有个微信，够了，你凭什么让我再装一个类似的应用？说服我。。
-        %li 
-          .author lee:
-          .reply 微信已经占领了庞大的用户，当你身边的熟人没有一个使用LINE的时候，你是否还能转过去呢？就像当年Whatsapp在国内的没落一样。  
-        %li
-          .author fish:
-          .reply Line 的表情库和表情收费模式可复制性太强（虽然以微信的野心几乎看不上这个），而且在聊天过程中加入表情也并不需要什么社区氛围，在中国市场，Line几乎没有什么优势.
-      .qrcode
-        %img{:src => "images/qrcode.png", :alt => ""}
-        %span 二维码扫描下载
-    %footer
+    %article.more-des-box
+      .more-des
+        %ul.feature
+          %li.first
+            %img{:src => "images/client.png", :alt => ""} 
+            %h3 全平台支持
+            .info 完美支持 iPhone、iPad 和 Android 设备，优化了移动阅读与分享的体验，让有启发的文章和精彩的观点可以瞬间分享给你的朋友和关注者。
+          %li
+            %img{:src => "images/gift.png", :alt => ""} 
+            %h3 积分换好礼
+            .info 在这里, 您不仅仅能免费查看《商业价值》杂志的所有内容，还能参与客户端里互动和编辑推荐的各种的活动, 通过参与互动, 您将有机会获取实物奖品。
+        %h2 来自用户的声音
+        %ul.review-list
+          %em.emborder
+          %li
+            .author sundaopeng:
+            .review 我用的最有创意、最能启发智慧的资讯软件。
+          %li 
+            .author AnakinFoxe:
+            .review 观点明确，逻辑清晰，论据充足，非常棒！期望一直保持下去。哪怕收费，只要能保持这高水平都值！ 
+          %li.last
+            .author 榆钱诺诺:
+            .review 寻找很久这样分析商业价值的资料，一直未果！经朋友推荐，看了没有几天！真是收获颇多！非常感谢商业价值的创始人和幕后的制作团队！我是你们忠实的 Fans！我会一直陪伴你们！
+        .qrcode
+          %img{:src => "images/qrcode.png", :alt => ""}
+          %span 二维码扫描下载
+    %footer.footer
       .copyright Copyright © 2009 - 2012 《商业价值》杂志
       .follow-us
-        %img{:src => "images/weibo.png", :alt => ""} 
-        %img{:src => "images/tencentweibo.png", :alt => ""} 
+        %img.weibo{:src => "images/weibo.png", :alt => ""} 
+        %img.tencentweibo{:src => "images/tencentweibo.png", :alt => ""} 
     :javascript
       // here the post-load JS starts.
