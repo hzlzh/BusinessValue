@@ -531,6 +531,7 @@ body.android .mobile-box .banner-320 {
   height: 332px;
   width: 320px;
   background: url("images/banner-320.png") no-repeat scroll center center transparent;
+  margin: 0 auto;
 }
 body.android .mobile-box .app-des {
   margin-top: -30px;
@@ -687,7 +688,7 @@ body.android .mobile-box .google-play {
     font-size: 0.8em;
   }
   .more-des-box .more-des {
-    padding-top: 91px;
+    padding-top: 106px;
   }
   .more-des-box .more-des ul.feature li img {
     max-width: 160px;
