@@ -2,18 +2,15 @@
 @name: BusinessValue Mobile
 @author: Andy Huang(andyhuang@geekpark.net)
 */
-@import "libs/reset";
-@import "libs/elements";
+@import "libs/reset.less";
+@import "libs/elements.less";
 
-body{min-width: 320px;margin: 0;
+body{min-width: 320px;margin: 0;-webkit-tap-highlight-color:none;
   ul{margin: 0;padding: 0;
     li{margin: 0;padding: 0;list-style-type: none;}
   }
 }
-.header{overflow: hidden;margin: 0 auto;width: 1024px;
-  .logo{float: left;margin: 20px 25px 10px 20px;}
-  .slogen{margin-top: 50px;}
-}
+
 .banner{height: 386px;
   .color-bar{background: url("images/color-bar.png") repeat scroll center center transparent;height: 8px;width: 100%;display: block;}
   img.banner-bg{position: absolute;z-index: -1;width: 100%;}
@@ -78,8 +75,11 @@ body.iphone{overflow: hidded;
   .mobile-box .banner-320{display: block;height: 332px;width: 320px;background: url("images/banner-320.png") no-repeat scroll center center transparent;margin: 0 auto;}
   .mobile-box .app-des{margin-top: -30px;font-size: 0.8em;text-align: center;color:#6A350A;}
   .mobile-box .app-store{text-indent: -999px;display: block;height: 55px;width: 193px;margin:5px auto;background: url("images/app-store.png") no-repeat scroll center center transparent;}
+  .mobile-box .app-store:hover,.mobile-box .app-store.hover{text-indent: -999px;display: block;height: 55px;width: 193px;margin:5px auto;background: url("images/app-store-hover.png") no-repeat scroll center center transparent;}
   .mobile-box .apk-dl{text-indent: -999px;display: none;}
+  .mobile-box .apk-dl:hover,.mobile-box .apk-dl.hover{text-indent: -999px;display: none;}
   .mobile-box .google-play{text-indent: -999px;display: none;}
+  .mobile-box .google-play:hover,.mobile-box .google-play.hover{text-indent: -999px;display: none;}
 }
 body.android{overflow: hidded;
   .banner .color-bar{height: 4px;}
@@ -88,8 +88,11 @@ body.android{overflow: hidded;
   .mobile-box .banner-320{display: block;height: 332px;width: 320px;background: url("images/banner-320.png") no-repeat scroll center center transparent;margin: 0 auto;}
   .mobile-box .app-des{margin-top: -30px;font-size: 0.8em;text-align: center;color:#6A350A;}
   .mobile-box .app-store{text-indent: -999px;display: none;}
+  .mobile-box .app-store:hover,.mobile-box .app-store.hover{text-indent: -999px;display: none;}
   .mobile-box .apk-dl{text-indent: -999px;display: block;height: 55px;width: 193px;margin:5px auto;background: url("images/apk-dl.png") no-repeat scroll center center transparent;}
+  .mobile-box .apk-dl:hover,.mobile-box .apk-dl.hover{text-indent: -999px;display: block;height: 55px;width: 193px;margin:5px auto;background: url("images/apk-dl-hover.png") no-repeat scroll center center transparent;}
   .mobile-box .google-play{text-indent: -999px;display: block;height: 55px;width: 193px;margin:5px auto;background: url("images/google-play.png") no-repeat scroll center center transparent;}
+  .mobile-box .google-play:hover,.mobile-box .google-play.hover{text-indent: -999px;display: block;height: 55px;width: 193px;margin:5px auto;background: url("images/google-play-hover.png") no-repeat scroll center center transparent;}
 }
 
 
@@ -168,7 +171,10 @@ body.android{overflow: hidded;
        only screen and (min--moz-device-pixel-ratio:1.5),
        only screen and (min-resolution: 240dpi) {
   body.iphone .mobile-box .app-store{background-image: url("images/app-store@2x.png"); background-size: 193px 55px; }
+  body.iphone .mobile-box .app-store:hover,body.iphone .mobile-box .app-store.hover{background-image: url("images/app-store-hover@2x.png"); background-size: 193px 55px; }
   body.iphone .mobile-box .banner-320,body.android .mobile-box .banner-320{background-image: url("images/banner-320@2x.png"); background-size: 320px 332px;}
   body.android .mobile-box .apk-dl{background-image: url("images/apk-dl@2x.png"); background-size: 193px 55px;}
+  body.android .mobile-box .apk-dl:hover,body.android .mobile-box .apk-dl.hover{background-image: url("images/apk-dl-hover@2x.png"); background-size: 193px 55px;}
   body.android .mobile-box .google-play{background-image: url("images/google-play@2x.png"); background-size: 193px 55px;}
+  body.android .mobile-box .google-play:hover, body.android .mobile-box .google-play.hover{background-image: url("images/google-play-hover@2x.png"); background-size: 193px 55px;}
 }

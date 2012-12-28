@@ -256,6 +256,7 @@ textarea {
 body {
   min-width: 320px;
   margin: 0;
+  -webkit-tap-highlight-color: none;
 }
 body ul {
   margin: 0;
@@ -265,18 +266,6 @@ body ul li {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-.header {
-  overflow: hidden;
-  margin: 0 auto;
-  width: 1024px;
-}
-.header .logo {
-  float: left;
-  margin: 20px 25px 10px 20px;
-}
-.header .slogen {
-  margin-top: 50px;
 }
 .banner {
   height: 386px;
@@ -503,11 +492,30 @@ body.iphone .mobile-box .app-store {
   margin: 5px auto;
   background: url("images/app-store.png") no-repeat scroll center center transparent;
 }
+body.iphone .mobile-box .app-store:hover,
+body.iphone .mobile-box .app-store.hover {
+  text-indent: -999px;
+  display: block;
+  height: 55px;
+  width: 193px;
+  margin: 5px auto;
+  background: url("images/app-store-hover.png") no-repeat scroll center center transparent;
+}
 body.iphone .mobile-box .apk-dl {
   text-indent: -999px;
   display: none;
 }
+body.iphone .mobile-box .apk-dl:hover,
+body.iphone .mobile-box .apk-dl.hover {
+  text-indent: -999px;
+  display: none;
+}
 body.iphone .mobile-box .google-play {
+  text-indent: -999px;
+  display: none;
+}
+body.iphone .mobile-box .google-play:hover,
+body.iphone .mobile-box .google-play.hover {
   text-indent: -999px;
   display: none;
 }
@@ -543,6 +551,11 @@ body.android .mobile-box .app-store {
   text-indent: -999px;
   display: none;
 }
+body.android .mobile-box .app-store:hover,
+body.android .mobile-box .app-store.hover {
+  text-indent: -999px;
+  display: none;
+}
 body.android .mobile-box .apk-dl {
   text-indent: -999px;
   display: block;
@@ -551,6 +564,15 @@ body.android .mobile-box .apk-dl {
   margin: 5px auto;
   background: url("images/apk-dl.png") no-repeat scroll center center transparent;
 }
+body.android .mobile-box .apk-dl:hover,
+body.android .mobile-box .apk-dl.hover {
+  text-indent: -999px;
+  display: block;
+  height: 55px;
+  width: 193px;
+  margin: 5px auto;
+  background: url("images/apk-dl-hover.png") no-repeat scroll center center transparent;
+}
 body.android .mobile-box .google-play {
   text-indent: -999px;
   display: block;
@@ -558,6 +580,15 @@ body.android .mobile-box .google-play {
   width: 193px;
   margin: 5px auto;
   background: url("images/google-play.png") no-repeat scroll center center transparent;
+}
+body.android .mobile-box .google-play:hover,
+body.android .mobile-box .google-play.hover {
+  text-indent: -999px;
+  display: block;
+  height: 55px;
+  width: 193px;
+  margin: 5px auto;
+  background: url("images/google-play-hover.png") no-repeat scroll center center transparent;
 }
 @media screen and (max-width: 1040px) {
   .banner img.banner-bg {
@@ -779,6 +810,11 @@ body.android .mobile-box .google-play {
     background-image: url("images/app-store@2x.png");
     background-size: 193px 55px;
   }
+  body.iphone .mobile-box .app-store:hover,
+  body.iphone .mobile-box .app-store.hover {
+    background-image: url("images/app-store-hover@2x.png");
+    background-size: 193px 55px;
+  }
   body.iphone .mobile-box .banner-320,
   body.android .mobile-box .banner-320 {
     background-image: url("images/banner-320@2x.png");
@@ -788,8 +824,18 @@ body.android .mobile-box .google-play {
     background-image: url("images/apk-dl@2x.png");
     background-size: 193px 55px;
   }
+  body.android .mobile-box .apk-dl:hover,
+  body.android .mobile-box .apk-dl.hover {
+    background-image: url("images/apk-dl-hover@2x.png");
+    background-size: 193px 55px;
+  }
   body.android .mobile-box .google-play {
     background-image: url("images/google-play@2x.png");
+    background-size: 193px 55px;
+  }
+  body.android .mobile-box .google-play:hover,
+  body.android .mobile-box .google-play.hover {
+    background-image: url("images/google-play-hover@2x.png");
     background-size: 193px 55px;
   }
 }
