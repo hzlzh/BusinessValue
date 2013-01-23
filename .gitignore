@@ -1,0 +1,8 @@
+*.swp
+*.D_Store
+/__
+*.sublime-project
+*.sublime-workspace
+*.sprt
+*.mkm
+*.psd
