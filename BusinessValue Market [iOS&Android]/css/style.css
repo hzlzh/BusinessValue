@@ -186,6 +186,11 @@ body {
   margin: 0;
   background-image: url(images/bg.png);
 }
+body ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 body .btn-green {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -288,6 +293,35 @@ body article .content .tip {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  margin-bottom: 10px;
+}
+body article .content table {
+  border: 1px solid #c2c2c2;
+  color: #616161;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 1px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #d6d6d6;
+}
+body article .content table tbody tr th {
+  height: 39px;
+  line-height: 39px;
+  background-color: #f9f9f9;
+}
+body article .content table tbody tr td {
+  font-size: 13px;
+  height: 31px;
+  line-height: 31px;
+  background-color: #fff;
+  border-bottom: 1px solid #d0d0d0;
+}
+body article .content table tbody tr:last-child td {
+  border-bottom: none;
 }
 body article .content .form {
   margin-top: 30px;
@@ -325,6 +359,51 @@ body article .content .form form .submit-btn {
 }
 body article .content .form form .submit-btn input {
   cursor: pointer;
+}
+body article .content ul.goods-list > li {
+  box-shadow: 1px 1px 2px #D9D8D8;
+  font-size: 13px;
+  line-height: 15px;
+  background-color: #fff;
+  padding: 10px 15px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 10px;
+}
+body article .content ul.goods-list .goods-item {
+  overflow: hidden;
+}
+body article .content ul.goods-list .goods-item img {
+  width: 118px;
+  height: 100px;
+  float: left;
+  margin-right: 19px;
+}
+body article .content ul.goods-list .goods-item ul {
+  float: left;
+}
+body article .content ul.goods-list .goods-item ul li {
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  color: #494949;
+}
+body article .content ul.goods-list .goods-item ul li.name {
+  margin-left: 10px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #000;
+}
+body article .content .goods-des {
+  color: #323232;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 5px;
+  text-shadow: 0 0 1px #fff;
 }
 body article .submit-box {
   text-align: center;

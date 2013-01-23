@@ -9,6 +9,12 @@ body{
     font-size: 14px;
     margin: 0;
     background-image: url(images/bg.png);
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+        li{}
+    }
     .btn-green{
         .rounded(5px);
         padding:4px 15px;
@@ -100,6 +106,33 @@ body{
                 background-color: #fff;
                 padding:10px 15px;
                 .rounded(4px);
+                margin-bottom: 10px;
+            }
+            table{
+                border: 1px solid #c2c2c2;
+                color: #616161;
+                .rounded(2px);
+                padding: 1px;
+                background-color: #fff;
+                box-shadow: 1px 1px 1px #d6d6d6;
+                tbody{
+                    tr{
+                        th{
+                            height: 39px;
+                            line-height: 39px;
+                            background-color: #f9f9f9;
+                        }
+                        td{
+                            font-size: 13px;
+                            height: 31px;
+                            line-height: 31px;
+                            background-color: #fff;
+                            border-bottom: 1px solid #d0d0d0;
+
+                        }
+                        &:last-child td{border-bottom: none;}
+                    }
+                }
             }
             .form{
                 margin-top: 30px;   
@@ -130,6 +163,54 @@ body{
                         }
                     }
                 }
+            }
+            ul.goods-list{
+                >li{
+                    box-shadow: 1px 1px 2px #D9D8D8;
+                font-size: 13px;
+                line-height: 15px;
+                background-color: #fff;
+                padding:10px 15px;
+                .rounded(4px);
+                margin-bottom: 10px;
+                }
+                .goods-item{
+                    overflow: hidden;
+                    img{
+                        width: 118px;
+                        height: 100px;
+                        float: left;
+                        margin-right: 19px;
+                    }
+                    ul{
+                        float: left;
+                        li{
+                            font-size: 12px;
+                            margin-bottom: 10px;
+                            margin-left: 20px;
+                            color: #494949;
+                            &.name{
+                                margin-left: 10px;
+                                font-size: 14px;
+                                margin-bottom: 12px;
+                                color: #000;
+                            }
+                            &.point{
+                            }
+                            &.left{
+                            }
+                            &.detail-btn{
+                            }
+                        }
+                    }
+                }
+            }
+            .goods-des{
+                color: #323232;
+                font-size: 12px;
+                line-height: 20px;
+                padding: 5px;
+                text-shadow: 0 0 1px #fff;  
             }
         }
         .submit-box{
