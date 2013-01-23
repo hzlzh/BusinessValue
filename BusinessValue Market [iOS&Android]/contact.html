@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width" name="viewport">
+    <title>cool-head</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta content="no" name="apple-mobile-web-app-capable">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/libs/modernizr.js"></script>
+    <script src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <span>积分兑换</span>
+          </li>
+          <li class="mid">
+            <span>积分抽奖</span>
+          </li>
+          <li>
+            <span>兑换记录</span>
+          </li>
+        </ul>
+      </nav>
+      <div class="banner">
+        <div class="current-point">您的积分：0</div>
+        <div class="history-point">收支明细</div>
+      </div>
+    </header>
+    <article>
+      <div class="content">
+        <div class="tip">成功兑换 xxxx</div>
+        <div class="form">
+          <form action="http://api2.businessvalue.com.cn/index.php" method="post" name="contact_form" id="contact_form" class="format">
+            <div class="hiddenFields">
+              <input type="hidden" value="44" name="ACT">
+              <input type="hidden" value="mall/contact" name="URI">
+              <input type="hidden" value="ac37b88a5b83aefab3386806ccaa6c4a521fec03" name="XID">
+              <input type="hidden" value="open" name="status">
+              <input type="hidden" value="/mall/contact//success" name="return">
+              <input type="hidden" value="" name="redirect_on_duplicate">
+              <input type="hidden" value="http://api2.businessvalue.com.cn/index.php/mall/contact" name="RET">
+              <input type="hidden" value="商品兑换" name="form_name">
+              <input type="hidden" value="6307" name="params_id">
+              <input type="hidden" value="1" name="site_id">
+              <input type="hidden" value="" name="content">
+              <input type="hidden" value="" name="entry_id">
+            </div>
+            <div class="form-item">
+              <lable for="name">姓名</lable>
+              <input value="" name="name" id="name">
+            </div>
+            <div class="form-item">
+              <lable for="email">邮箱</lable>
+              <input value="liujiachang777@gmail.com" name="email" id="email">
+            </div>
+            <div class="form-item">
+              <lable for="phone">电话</lable>
+              <input value="1" name="phone" id="phone">
+            </div>
+            <div class="form-item">
+              <lable for="address">地址</lable>
+              <input value="aaa" name="address" id="address">
+            </div>
+            <div class="submit-btn">
+              <input class="btn-green" type="submit" value="确认">
+            </div>
+          </form>
+        </div>
+      </div>
+    </article>
+    <footer></footer>
+  </body>
+</html>

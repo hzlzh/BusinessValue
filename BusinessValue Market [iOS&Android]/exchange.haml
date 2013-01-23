@@ -1,0 +1,31 @@
+!!! 5
+%html{'lang' => 'en-US', 'dir' => 'ltr'}
+  %head
+    %meta{'charset' => 'UTF-8'}/
+    %meta{:name => "viewport", :content  => "width=device-width"}
+    %title cool-head
+    %meta{:name => "keywords", :content  => ""}
+    %meta{:name => "description", :content  => ""}
+    %meta{:name => "apple-mobile-web-app-capable", :content  => "no"}
+    %link{:rel => "stylesheet", :href  => "css/style.css"}
+    %script{:src  => "js/libs/modernizr.js"}
+    %script{:src  => "js/jquery.min.js"}
+  %body
+    %header
+      %nav 
+        %ul 
+          %li
+            %span 积分兑换
+          %li
+            %span 积分抽奖
+          %li
+            %span 兑换记录
+      .banner
+        .current-point 您的积分：341
+        .history-point 收支明细
+    %article 
+      .tip 您当前的积分总数是341，兑换后您讲剩余16.00分，是否继续兑换《技术元素》？
+      .submit-box
+        %span.submit-btn 兑换
+        %span.back-btn 返回
+    %footer

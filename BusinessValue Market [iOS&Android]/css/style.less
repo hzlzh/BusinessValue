@@ -1,0 +1,152 @@
+/*
+@name: BusinessValue Market iOS & Android
+@author: Andy Huang(andyhuang@geekpark.net)
+*/
+@import "libs/reset";
+@import "libs/elements";
+body{
+    font: 13px/1.231 sans-serif;
+    font-size: 14px;
+    margin: 0;
+    background-image: url(images/bg.png);
+    .btn-green{
+        .rounded(5px);
+        padding:4px 15px;
+        color: #fff;
+        text-decoration: none;
+        text-shadow:0 0 1px #A6B556;
+        margin-bottom: 20px;
+        margin-right: 5px;
+        border:1px solid #889E13;
+        box-shadow: 0 0 1px #A6B556;
+    background: -webkit-linear-gradient(top,#ACC725,#8C9F25);
+    background: -moz-linear-gradient(top,#ACC725,#8C9F25);
+    background: -ms-linear-gradient(top,#ACC725,#8C9F25);
+    background: -o-linear-gradient(top,#ACC725,#8C9F25);
+    background: linear-gradient(top,#ACC725,#8C9F25);
+    }
+    .btn-green:hover{}
+    .btn-grey{
+        .rounded(5px);
+        padding:4px 15px;
+        color: #6B6B6B;
+        text-shadow:0 0 1px #d5d5d5;
+        margin-bottom: 20px;
+        text-decoration: none;
+        margin-right: 5px;
+        border:1px solid #d1d1d1;
+        box-shadow: 0 0 1px #d5d5d5;
+    background: -webkit-linear-gradient(top,#f6f6f6,#dedede);
+    background: -moz-linear-gradient(top,#f6f6f6,#dedede);
+    background: -ms-linear-gradient(top,#f6f6f6,#dedede);
+    background: -o-linear-gradient(top,#f6f6f6,#dedede);
+    background: linear-gradient(top,#f6f6f6,#dedede);
+    }
+
+    header{
+        nav{
+            font-size: 16px;
+            background-color: #A0B825;
+            border-bottom: 1px solid #ececec;
+            box-shadow: 0 1px 0 #ececec;
+            padding: 0 2%px;
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                overflow: hidden;
+                li{
+                    &.mid{
+                        margin: 0 11%;
+                    }
+                    float: left;
+                    min-width: 26%;
+                    span{
+                        text-align: center;
+                        display: block;
+                        color: #fff;
+                        height: 33px;
+                        line-height: 33px;
+                    }
+                }
+            }
+        }
+        .banner{
+            padding: 0 10px;
+            height: 27px;
+            background-color: #fff;
+            overflow: hidden;
+            line-height: 27px;
+            .current-point{
+                float: left;
+            }
+            .history-point{
+                float: right;
+                margin: 5px 0;
+                padding: 2px 0;
+                line-height: 12px;
+                border-bottom: dashed 1px #6a6a6a;
+            }
+        }
+    }
+    article{
+        padding: 0 10px;
+        margin-top: 7px;
+        .content{
+            .tip{
+                box-shadow: 1px 1px 2px #D9D8D8;
+                font-size: 13px;
+                line-height: 15px;
+                background-color: #fff;
+                padding:10px 15px;
+                .rounded(4px);
+            }
+            .form{
+                margin-top: 30px;   
+                form{
+                    margin: 0 auto;
+                    width: 170px;
+                    .form-item{
+                        margin-bottom: 14px;
+                        lable{margin-right: 20px;}
+                        input{
+                            .rounded(3px);  
+                            height: 16px;
+                            line-height: 16px;
+                            padding:2px;
+                            width: 110px;
+                            border: 1px solid #cacaca;
+                            box-shadow: inset 1px 1px 1px #ededed;
+                        }
+                    }
+                    .submit-btn{
+                        padding-top: 55px;
+                        margin: 0 auto;
+                        width: 170px;
+                        text-align: center;
+                        display: block;
+                        input{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .submit-box{
+            text-align: center;
+            margin-top: 28px;
+            .submit-btn{
+                margin-right: 27px;
+            }
+            .back-btn{
+
+            }
+            .store-bth{
+
+            }
+        }
+    }
+    footer{
+        padding: 0 10px;
+    }
+}
