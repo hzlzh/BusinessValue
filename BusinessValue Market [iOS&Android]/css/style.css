@@ -236,13 +236,12 @@ body .btn-grey {
   background: linear-gradient(top, #f6f6f6, #dedede);
 }
 body header {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 body header nav {
   font-size: 14px;
   background-color: #A0B825;
-  border-bottom: 1px solid #ececec;
-  box-shadow: 0 1px 0 #ececec;
+  box-shadow: 0 0 2px #ddd;
   font-weight: bold;
   padding: 0 2%px;
 }
@@ -266,17 +265,30 @@ body header nav ul li a {
 body header nav ul li span {
   text-align: center;
   display: block;
+  position: relative;
   color: #fff;
   text-decoration: none;
-  padding-top: 3px;
-  height: 30px;
-  line-height: 30px;
+  height: 33px;
+  line-height: 33px;
+}
+body header nav ul li span i {
+  position: absolute;
+  bottom: 0px;
+  width: 0;
+  z-index: 999;
+  height: 0;
+  border-width: 7px;
+  left: 50%;
+  margin-left: -7px;
+  border-style: dashed dashed solid dashed;
+  border-color: transparent transparent #fff transparent;
 }
 body header .banner {
   padding: 0 10px;
   height: 27px;
   background-color: #fff;
   overflow: hidden;
+  border-bottom: 1px solid #cbcbcb;
   line-height: 27px;
 }
 body header .banner .current-point {
@@ -292,7 +304,7 @@ body header .banner .history-point {
 body .banner .banner-tip {
   height: 112px;
   overflow: hidden;
-  box-shadow: 0 0 2px #D9D8D8;
+  box-shadow: 1px 1px 2px #ddd;
   font-size: 13px;
   line-height: 15px;
   background-color: #fff;
@@ -311,13 +323,13 @@ body .banner .banner-tip .banner-img {
   display: block;
   background-size: auto 105px;
   float: right;
-  margin-right: 10%;
+  margin-right: 10px;
   background-image: url(images/banner.png);
   background-repeat: no-repeat;
 }
 body .banner .banner-tip .check-in-box {
   float: left;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 body .banner .banner-tip .check-in-box .text {
   color: #757575;
@@ -325,7 +337,7 @@ body .banner .banner-tip .check-in-box .text {
   font-size: 14px;
   line-height: 14px;
   margin-bottom: 10px;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 body .banner .banner-tip .check-in-box form input[type="submit"] {
   border: none;
@@ -333,6 +345,7 @@ body .banner .banner-tip .check-in-box form input[type="submit"] {
   text-align: center;
   display: block;
   margin: 0 auto;
+  font-size: 14px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -367,7 +380,7 @@ body article {
   padding: 0 5px;
 }
 body article .content .tip {
-  box-shadow: 0 0 2px #D9D8D8;
+  box-shadow: 1px 1px 2px #ddd;
   font-size: 13px;
   line-height: 15px;
   background-color: #fff;
@@ -391,12 +404,12 @@ body article .content table {
   background-clip: padding-box;
   padding: 1px;
   background-color: #fff;
-  box-shadow: 1px 1px 1px #d6d6d6;
+  box-shadow: 1px 1px 2px #d6d6d6;
 }
 body article .content table tbody tr th {
   height: 39px;
   line-height: 39px;
-  background-color: #f9f9f9;
+  background-color: #f2f2f2;
 }
 body article .content table tbody tr td {
   font-size: 13px;
@@ -446,18 +459,18 @@ body article .content .form form .submit-btn input {
   cursor: pointer;
 }
 body article .content ul.goods-list > li {
-  box-shadow: 0 0 2px #D9D8D8;
+  box-shadow: 1px 1px 2px #ccc;
   font-size: 13px;
   line-height: 15px;
   background-color: #fff;
-  padding: 10px 15px;
+  padding: 10px 10px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 body article .content ul.goods-list .goods-item {
   overflow: hidden;
@@ -473,7 +486,8 @@ body article .content ul.goods-list .goods-item ul {
 }
 body article .content ul.goods-list .goods-item ul li {
   font-size: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
   margin-left: 20px;
   color: #494949;
 }
@@ -483,12 +497,19 @@ body article .content ul.goods-list .goods-item ul li.name {
   margin-bottom: 12px;
   color: #000;
 }
+body article .content ul.goods-list .goods-item ul li.left {
+  margin-bottom: 8px;
+}
+body article .content ul.goods-list .goods-item ul li.detail-btn a {
+  height: 26px;
+  line-height: 26px;
+}
 body article .content .goods-des {
   color: #323232;
   font-size: 12px;
   line-height: 20px;
   padding: 5px;
-  text-shadow: 0 0 1px #fff;
+  text-shadow: 1px 1px 1px #fff;
 }
 body article .submit-box {
   text-align: center;

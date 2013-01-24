@@ -52,12 +52,11 @@ body{
     }
 
     header{
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         nav{
             font-size: 14px;
             background-color: #A0B825;
-            border-bottom: 1px solid #ececec;
-            box-shadow: 0 1px 0 #ececec;
+            box-shadow: 0 0 2px #ddd;
             font-weight: bold;
             padding: 0 2%px;
             ul{
@@ -76,13 +75,25 @@ body{
                         text-decoration: none;
                     }
                     span{
+                        i{
+                            position: absolute;
+                            bottom: 0px;
+                            width:0; 
+                            z-index: 999;
+                            height:0;  
+                            border-width:7px;  
+                            left:50%;
+                            margin-left: -7px;
+                            border-style: dashed dashed solid dashed; 
+                            border-color: transparent transparent #fff transparent;
+                        }
                         text-align: center;
                         display: block;
+                        position: relative;
                         color: #fff;
                         text-decoration: none;
-                        padding-top: 3px;
-                        height: 30px;
-                        line-height: 30px;
+                        height: 33px;
+                        line-height: 33px;
                     }
                 }
             }
@@ -92,6 +103,7 @@ body{
             height: 27px;
             background-color: #fff;
             overflow: hidden;
+            border-bottom: 1px solid #cbcbcb;
             line-height: 27px;
             .current-point{
                 float: left;
@@ -110,7 +122,7 @@ body{
             overflow: hidden;
             height: 112px;
             overflow: hidden;
-            box-shadow: 0 0 2px #D9D8D8;
+            box-shadow: 1px 1px 2px #ddd;
             font-size: 13px;
             line-height: 15px;
             background-color: #fff;
@@ -124,20 +136,20 @@ body{
                 display: block;
                 background-size: auto 105px;
                 float: right;
-                margin-right: 10%;
+                margin-right: 10px;
                 background-image: url(images/banner.png);
                 background-repeat: no-repeat;
             }
             .check-in-box{
                 float: left;
-                margin-left: 30px;
+                margin-left: 20px;
                 .text{
                     color: #757575;
                     display: block;
                     font-size: 14px;
                     line-height: 14px;
                     margin-bottom: 10px;
-                    margin-top: 30px;
+                    margin-top: 35px;
                 }
                 form{
                     input[type="submit"]{
@@ -146,6 +158,7 @@ body{
                         text-align: center;
                         display: block;
                         margin: 0 auto;
+                        font-size: 14px;
                         .rounded(3px);
                     }
                 }
@@ -180,7 +193,7 @@ body{
         padding: 0 5px;
         .content{
             .tip{
-                box-shadow: 0 0 2px #D9D8D8;
+                box-shadow: 1px 1px 2px #ddd;
                 font-size: 13px;
                 line-height: 15px;
                 background-color: #fff;
@@ -194,13 +207,13 @@ body{
                 .rounded(2px);
                 padding: 1px;
                 background-color: #fff;
-                box-shadow: 1px 1px 1px #d6d6d6;
+                box-shadow: 1px 1px 2px #d6d6d6;
                 tbody{
                     tr{
                         th{
                             height: 39px;
                             line-height: 39px;
-                            background-color: #f9f9f9;
+                            background-color: #f2f2f2;
                         }
                         td{
                             font-size: 13px;
@@ -245,13 +258,13 @@ body{
             }
             ul.goods-list{
                 >li{
-                    box-shadow: 0 0 2px #D9D8D8;
-                font-size: 13px;
-                line-height: 15px;
-                background-color: #fff;
-                padding:10px 15px;
-                .rounded(4px);
-                margin-bottom: 10px;
+                    box-shadow: 1px 1px 2px #ccc;
+                    font-size: 13px;
+                    line-height: 15px;
+                    background-color: #fff;
+                    padding:10px 10px;
+                    .rounded(4px);
+                    margin-bottom: 5px;
                 }
                 .goods-item{
                     overflow: hidden;
@@ -265,7 +278,8 @@ body{
                         float: left;
                         li{
                             font-size: 12px;
-                            margin-bottom: 10px;
+                            margin-bottom: 5px;
+                            overflow: hidden;
                             margin-left: 20px;
                             color: #494949;
                             &.name{
@@ -277,8 +291,13 @@ body{
                             &.point{
                             }
                             &.left{
+                                margin-bottom: 8px;
                             }
                             &.detail-btn{
+                                a{
+                                    height: 26px;
+                                    line-height: 26px;
+                                }
                             }
                         }
                     }
@@ -289,7 +308,7 @@ body{
                 font-size: 12px;
                 line-height: 20px;
                 padding: 5px;
-                text-shadow: 0 0 1px #fff;  
+                text-shadow: 1px 1px 1px #fff;
             }
         }
         .submit-box{
