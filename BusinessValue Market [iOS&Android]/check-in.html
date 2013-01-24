@@ -2,21 +2,20 @@
 <html dir="ltr" lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>积分商城</title>
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <meta content="no" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/libs/modernizr.js"></script>
-    <script src="js/jquery.min.js"></script>
   </head>
   <body>
     <header>
       <nav>
         <ul>
           <li>
-            <span>积分兑换</span>
+            <span><span>积分兑换</span></span>
           </li>
           <li class="mid current">
             <span>积分抽奖</span>
@@ -31,11 +30,26 @@
         <div class="history-point">收支明细</div>
       </div>
     </header>
+    <div class="banner">
+      <div class="banner-tip">
+        <div class="check-in-box">
+          <span class="text">每日抽奖 惊喜不断</span>
+          <form action="http://api2.businessvalue.com.cn/index.php" method="post" name="check_in" id="check_in">
+            <div class="hiddenFields">
+              <input type="hidden" value="21dcdb6be53d014f270793579f6c9231ca0c7e14" name="XID">
+              <input type="hidden" value="54" name="ACT">
+              <input type="hidden" value="/credit/check_in" name="RET">
+              <input type="hidden" value="1" name="site_id">
+            </div>
+            <input class="check-in-btn btn-green" type="submit" value="马上抽奖" name="submit">
+          </form>
+        </div>
+        <span class="banner-img"></span>
+      </div>
+      <h2 class="how-to"><i></i>如何获得积分</h2>
+    </div>
     <article>
       <div class="content">
-        <div class="tip">
-          
-        </div>
         <table border="0" align="center" cellspacing="0" cellpadding="0" width="100%">
           <tbody>
             <tr>
@@ -62,8 +76,6 @@
         </table>
       </div>
       <div class="submit-box">
-        <a href="#" class="submit-btn btn-green">兑换</a>
-        <a href="#" class="back-btn btn-grey">返回</a>
       </div>
     </article>
     <footer></footer>

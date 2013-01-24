@@ -182,7 +182,7 @@ textarea {
 -----------------------------------------------------*/
 body {
   font: 13px/1.231 sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
   background-image: url(images/bg.png);
 }
@@ -201,11 +201,12 @@ body .btn-green {
   padding: 4px 15px;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 0 1px #A6B556;
+  text-shadow: 0 0 1px #889F0E;
+  font-weight: bold;
   margin-bottom: 20px;
   margin-right: 5px;
-  border: 1px solid #889E13;
-  box-shadow: 0 0 1px #A6B556;
+  border: 1px solid #889F0E;
+  box-shadow: 0 0 1px #fff;
   background: -webkit-linear-gradient(top, #acc725, #8c9f25);
   background: -moz-linear-gradient(top, #acc725, #8c9f25);
   background: -ms-linear-gradient(top, #acc725, #8c9f25);
@@ -221,23 +222,28 @@ body .btn-grey {
   background-clip: padding-box;
   padding: 4px 15px;
   color: #6B6B6B;
-  text-shadow: 0 0 1px #d5d5d5;
+  text-shadow: 0 0 1px #fff;
   margin-bottom: 20px;
+  font-weight: bold;
   text-decoration: none;
   margin-right: 5px;
   border: 1px solid #d1d1d1;
-  box-shadow: 0 0 1px #d5d5d5;
+  box-shadow: 0 0 1px #fff;
   background: -webkit-linear-gradient(top, #f6f6f6, #dedede);
   background: -moz-linear-gradient(top, #f6f6f6, #dedede);
   background: -ms-linear-gradient(top, #f6f6f6, #dedede);
   background: -o-linear-gradient(top, #f6f6f6, #dedede);
   background: linear-gradient(top, #f6f6f6, #dedede);
 }
+body header {
+  margin-bottom: 3px;
+}
 body header nav {
-  font-size: 16px;
+  font-size: 14px;
   background-color: #A0B825;
   border-bottom: 1px solid #ececec;
   box-shadow: 0 1px 0 #ececec;
+  font-weight: bold;
   padding: 0 2%px;
 }
 body header nav ul {
@@ -253,12 +259,18 @@ body header nav ul li {
 body header nav ul li.mid {
   margin: 0 11%;
 }
+body header nav ul li a {
+  border: none;
+  text-decoration: none;
+}
 body header nav ul li span {
   text-align: center;
   display: block;
   color: #fff;
-  height: 33px;
-  line-height: 33px;
+  text-decoration: none;
+  padding-top: 3px;
+  height: 30px;
+  line-height: 30px;
 }
 body header .banner {
   padding: 0 10px;
@@ -277,12 +289,85 @@ body header .banner .history-point {
   line-height: 12px;
   border-bottom: dashed 1px #6a6a6a;
 }
+body .banner .banner-tip {
+  height: 112px;
+  overflow: hidden;
+  box-shadow: 0 0 2px #D9D8D8;
+  font-size: 13px;
+  line-height: 15px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding-bottom: 10px;
+}
+body .banner .banner-tip .banner-img {
+  width: 135px;
+  height: 105px;
+  margin-top: 10px;
+  display: block;
+  background-size: auto 105px;
+  float: right;
+  margin-right: 10%;
+  background-image: url(images/banner.png);
+  background-repeat: no-repeat;
+}
+body .banner .banner-tip .check-in-box {
+  float: left;
+  margin-left: 30px;
+}
+body .banner .banner-tip .check-in-box .text {
+  color: #757575;
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+body .banner .banner-tip .check-in-box form input[type="submit"] {
+  border: none;
+  padding: 4px 20px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+body .banner h2.how-to {
+  padding-left: 10px;
+  color: #606060;
+  position: relative;
+  background-image: url(images/red-line.png);
+  background-repeat: repeat-x;
+  background-size: auto 4px;
+  line-height: 16px;
+  font-size: 14px;
+  padding-top: 28px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+body .banner h2.how-to i {
+  position: absolute;
+  top: -11px;
+  background-image: url(images/bow.png);
+  background-repeat: no-repeat;
+  background-size: 53px 33px;
+  width: 107px;
+  height: 67px;
+  display: block;
+}
 body article {
-  padding: 0 10px;
-  margin-top: 7px;
+  padding: 0 5px;
 }
 body article .content .tip {
-  box-shadow: 1px 1px 2px #D9D8D8;
+  box-shadow: 0 0 2px #D9D8D8;
   font-size: 13px;
   line-height: 15px;
   background-color: #fff;
@@ -361,7 +446,7 @@ body article .content .form form .submit-btn input {
   cursor: pointer;
 }
 body article .content ul.goods-list > li {
-  box-shadow: 1px 1px 2px #D9D8D8;
+  box-shadow: 0 0 2px #D9D8D8;
   font-size: 13px;
   line-height: 15px;
   background-color: #fff;
