@@ -191,6 +191,10 @@ body ul {
   margin: 0;
   padding: 0;
 }
+body a {
+  text-decoration: none;
+  color: #222222;
+}
 body .btn-green {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -213,6 +217,28 @@ body .btn-green {
   background: -o-linear-gradient(top, #acc725, #8c9f25);
   background: linear-gradient(top, #acc725, #8c9f25);
 }
+body .btn-green:hover {
+  background: -webkit-linear-gradient(top, #8c9f25, #acc725);
+  background: -moz-linear-gradient(top, #8c9f25, #acc725);
+  background: -ms-linear-gradient(top, #8c9f25, #acc725);
+  background: -o-linear-gradient(top, #8c9f25, #acc725);
+  background: linear-gradient(top, #8c9f25, #acc725);
+}
+body .btn-light-green {
+  border: 1px solid #a8c06a;
+  background: -webkit-linear-gradient(top, #a8d058, #83a93b);
+  background: -moz-linear-gradient(top, #a8d058, #83a93b);
+  background: -ms-linear-gradient(top, #a8d058, #83a93b);
+  background: -o-linear-gradient(top, #a8d058, #83a93b);
+  background: linear-gradient(top, #a8d058, #83a93b);
+}
+body .btn-light-green:hover {
+  background: -webkit-linear-gradient(top, #83a93b, #a8d058);
+  background: -moz-linear-gradient(top, #83a93b, #a8d058);
+  background: -ms-linear-gradient(top, #83a93b, #a8d058);
+  background: -o-linear-gradient(top, #83a93b, #a8d058);
+  background: linear-gradient(top, #83a93b, #a8d058);
+}
 body .btn-grey {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -234,6 +260,13 @@ body .btn-grey {
   background: -ms-linear-gradient(top, #f6f6f6, #dedede);
   background: -o-linear-gradient(top, #f6f6f6, #dedede);
   background: linear-gradient(top, #f6f6f6, #dedede);
+}
+body .btn-grey:hover {
+  background: -webkit-linear-gradient(top, #dedede, #f6f6f6);
+  background: -moz-linear-gradient(top, #dedede, #f6f6f6);
+  background: -ms-linear-gradient(top, #dedede, #f6f6f6);
+  background: -o-linear-gradient(top, #dedede, #f6f6f6);
+  background: linear-gradient(top, #dedede, #f6f6f6);
 }
 body header {
   margin-bottom: 4px;
@@ -262,16 +295,7 @@ body header nav ul li a {
   border: none;
   text-decoration: none;
 }
-body header nav ul li span {
-  text-align: center;
-  display: block;
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-  height: 33px;
-  line-height: 33px;
-}
-body header nav ul li span i {
+body header nav ul li.current i {
   position: absolute;
   bottom: 0px;
   width: 0;
@@ -282,6 +306,15 @@ body header nav ul li span i {
   margin-left: -7px;
   border-style: dashed dashed solid dashed;
   border-color: transparent transparent #fff transparent;
+}
+body header nav ul li span {
+  text-align: center;
+  display: block;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  height: 33px;
+  line-height: 33px;
 }
 body header .banner {
   padding: 0 10px;
@@ -393,6 +426,43 @@ body article .content .tip {
   background-clip: padding-box;
   margin-bottom: 10px;
 }
+body article .content .page-nav {
+  padding: 0;
+  overflow: hidden;
+  padding: 10px 0;
+}
+body article .content .page-nava {
+  margin: 0;
+}
+body article .content .page-nav span {
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 4px 15px;
+  color: #7f7f7f;
+  text-shadow: 0 0 1px #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #cecece;
+  box-shadow: 0 0 1px #fff;
+  background: -webkit-linear-gradient(top, #f6f6f6, #dedede);
+  background: -moz-linear-gradient(top, #f6f6f6, #dedede);
+  background: -ms-linear-gradient(top, #f6f6f6, #dedede);
+  background: -o-linear-gradient(top, #f6f6f6, #dedede);
+  background: linear-gradient(top, #f6f6f6, #dedede);
+}
+body article .content .page-nav span:hover {
+  background: -webkit-linear-gradient(top, #dedede, #f6f6f6);
+  background: -moz-linear-gradient(top, #dedede, #f6f6f6);
+  background: -ms-linear-gradient(top, #dedede, #f6f6f6);
+  background: -o-linear-gradient(top, #dedede, #f6f6f6);
+  background: linear-gradient(top, #dedede, #f6f6f6);
+}
 body article .content table {
   border: 1px solid #c2c2c2;
   color: #616161;
@@ -500,6 +570,9 @@ body article .content ul.goods-list .goods-item ul li.name {
 body article .content ul.goods-list .goods-item ul li.left {
   margin-bottom: 8px;
 }
+body article .content ul.goods-list .goods-item ul li.left p {
+  display: inline;
+}
 body article .content ul.goods-list .goods-item ul li.detail-btn a {
   height: 26px;
   line-height: 26px;
@@ -517,6 +590,9 @@ body article .submit-box {
 }
 body article .submit-box .submit-btn {
   margin-right: 27px;
+  font-size: 13px;
+  height: 25px;
+  line-height: 12px;
 }
 body footer {
   padding: 0 10px;

@@ -15,6 +15,10 @@ body{
         padding:0;
         li{}
     }
+    a{
+        text-decoration: none;
+        color: #222222;
+    }
     .btn-green{
         .rounded(5px);
         padding:4px 15px;
@@ -32,7 +36,28 @@ body{
     background: -o-linear-gradient(top,#ACC725,#8C9F25);
     background: linear-gradient(top,#ACC725,#8C9F25);
     }
-    .btn-green:hover{}
+    .btn-green:hover{
+    background: -webkit-linear-gradient(top,#8C9F25,#ACC725);
+    background: -moz-linear-gradient(top,#8C9F25,#ACC725);
+    background: -ms-linear-gradient(top,#8C9F25,#ACC725);
+    background: -o-linear-gradient(top,#8C9F25,#ACC725);
+    background: linear-gradient(top,#8C9F25,#ACC725);
+    }
+    .btn-light-green{
+        border: 1px solid #a8c06a;
+    background: -webkit-linear-gradient(top,#a8d058,#83a93b);
+    background: -moz-linear-gradient(top,#a8d058,#83a93b);
+    background: -ms-linear-gradient(top,#a8d058,#83a93b);
+    background: -o-linear-gradient(top,#a8d058,#83a93b);
+    background: linear-gradient(top,#a8d058,#83a93b);
+    }
+    .btn-light-green:hover{
+    background: -webkit-linear-gradient(top,#83a93b,#a8d058);
+    background: -moz-linear-gradient(top,#83a93b,#a8d058);
+    background: -ms-linear-gradient(top,#83a93b,#a8d058);
+    background: -o-linear-gradient(top,#83a93b,#a8d058);
+    background: linear-gradient(top,#83a93b,#a8d058);
+    }
     .btn-grey{
         .rounded(5px);
         padding:4px 15px;
@@ -50,7 +75,19 @@ body{
     background: -o-linear-gradient(top,#f6f6f6,#dedede);
     background: linear-gradient(top,#f6f6f6,#dedede);
     }
+    .btn-grey:hover{
+    background: -webkit-linear-gradient(top,#dedede,#f6f6f6);
+    background: -moz-linear-gradient(top,#dedede,#f6f6f6);
+    background: -ms-linear-gradient(top,#dedede,#f6f6f6);
+    background: -o-linear-gradient(top,#dedede,#f6f6f6);
+    background: linear-gradient(top,#dedede,#f6f6f6);
+    }
+    .btn-light-grey{
 
+    }
+    .btn-light-grey:hover{
+
+    }
     header{
             margin-bottom: 4px;
         nav{
@@ -74,7 +111,7 @@ body{
                         border: none;
                         text-decoration: none;
                     }
-                    span{
+                    &.current{
                         i{
                             position: absolute;
                             bottom: 0px;
@@ -87,6 +124,8 @@ body{
                             border-style: dashed dashed solid dashed; 
                             border-color: transparent transparent #fff transparent;
                         }
+                    }
+                    span{
                         text-align: center;
                         display: block;
                         position: relative;
@@ -201,6 +240,38 @@ body{
                 .rounded(4px);
                 margin-bottom: 10px;
             }
+            .page-nav{
+                padding: 0;
+                overflow: hidden;
+                padding: 10px 0;
+                &a{
+                    margin: 0;
+                }
+                span{
+                    margin: 0;
+                    .rounded(5px);
+                    padding:4px 15px;
+                    color: #7f7f7f;
+                    text-shadow:0 0 1px #fff;
+                    margin-bottom: 20px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border:1px solid #cecece;
+                    box-shadow: 0 0 1px #fff;
+    background: -webkit-linear-gradient(top,#f6f6f6,#dedede);
+    background: -moz-linear-gradient(top,#f6f6f6,#dedede);
+    background: -ms-linear-gradient(top,#f6f6f6,#dedede);
+    background: -o-linear-gradient(top,#f6f6f6,#dedede);
+    background: linear-gradient(top,#f6f6f6,#dedede);
+                    &:hover{
+    background: -webkit-linear-gradient(top,#dedede,#f6f6f6);
+    background: -moz-linear-gradient(top,#dedede,#f6f6f6);
+    background: -ms-linear-gradient(top,#dedede,#f6f6f6);
+    background: -o-linear-gradient(top,#dedede,#f6f6f6);
+    background: linear-gradient(top,#dedede,#f6f6f6);
+                    }
+                }
+            }
             table{
                 border: 1px solid #c2c2c2;
                 color: #616161;
@@ -291,6 +362,7 @@ body{
                             &.point{
                             }
                             &.left{
+                                p{display: inline;}
                                 margin-bottom: 8px;
                             }
                             &.detail-btn{
@@ -316,6 +388,9 @@ body{
             margin-top: 28px;
             .submit-btn{
                 margin-right: 27px;
+                font-size: 13px;
+                height: 25px;
+                line-height: 12px;
             }
             .back-btn{
 
